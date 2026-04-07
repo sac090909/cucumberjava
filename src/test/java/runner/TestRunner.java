@@ -1,4 +1,4 @@
-package testrunner;
+package runner;
 
 import org.testng.annotations.DataProvider;
 
@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/java/featurefiles", glue="stepdefinations", dryRun=false, plugin = {
         "pretty",
-        "html:target/cucumber-html-report"
+        "html:target/cucumber-html-report/index.html"
     }, monochrome=true)
 public class TestRunner extends AbstractTestNGCucumberTests{
 	
